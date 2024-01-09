@@ -1,0 +1,10 @@
+-- Execute from the directory where the azcopy exutable is located
+
+-- Delete contents
+azcopy rm "https://jmcaliecewebsa.blob.core.windows.net/$web?[SAS TOKEN]" --recursive=true
+
+-- Deploy Site
+azcopy copy "C:\Deploy\*." "https://jmcaliecewebsa.blob.core.windows.net/$web?[SAS TOKEN]" --recursive=true
+
+
+
